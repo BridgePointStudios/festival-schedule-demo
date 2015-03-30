@@ -1,3 +1,5 @@
 <template name="bandEdit">
+    <h1>Edit Band Info</h1>
     {{> quickForm collection="Bands" doc=this id="updateBandForm" omitFields="bandEvents" type="update"}}
+    {{> quickRemoveButton collection="Bands" _id=this._id beforeRemove=beforeRemove class="btn btn-danger"}}
 </template>

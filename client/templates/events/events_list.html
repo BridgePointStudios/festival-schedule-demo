@@ -1,3 +1,8 @@
 <template name="eventsList">
-events lsit
+    <h3 class="band">Events</h3>
+  <div class="bands">
+    {{#each events}}
+      {{> eventItem}}
+    {{/each}}
+  </div>
 </template>
