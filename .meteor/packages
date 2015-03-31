@@ -14,7 +14,6 @@ twbs:bootstrap
 fourseven:scss
 ongoworks:security
 tsega:bootstrap3-datetimepicker
-aldeed:autoform-bs-datetimepicker
 aldeed:simple-schema
 aldeed:delete-button
 accounts-twitter
