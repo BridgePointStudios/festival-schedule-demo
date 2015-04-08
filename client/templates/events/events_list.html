@@ -1,6 +1,7 @@
 <template name="eventsList">
     <h3 class="band">Events
-        <span style="float:right;"><a href="{{pathFor 'addNewEvent'}}">Book Event Now</a></span></h3>
+        {{#if currentUser}}<span style="float:right;"><a href="{{pathFor 'addNewEvent'}}">Book Event Now</a></span> {{/if}}
+    </h3>
   <div class="bands">
     {{#each events}}
       {{> eventItem}}

@@ -3,8 +3,8 @@
        <div class="band-content">
            <h3><a href="{{pathFor 'bandPage'}}">{{ bandName }}</a>
                <span> {{ bandAddress.city }}, {{ bandAddress.state }}</span>
-               <span><a href="{{pathFor 'bandEdit'}}">Edit Band Info</a></span>
-             
+              {{#if currentUser}} <span><a href="{{pathFor 'bandEdit'}}">Edit Band Info</a></span>{{/if}}
+
            </h3>
        </div>
      </div>

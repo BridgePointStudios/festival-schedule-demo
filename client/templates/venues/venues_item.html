@@ -3,8 +3,8 @@
        <div class="band-content">
            <h3><a href="{{pathFor 'venuePage'}}">{{ venueName }}</a>
                <span> {{ venueAddress.city }}, {{ venueAddress.state }}</span>
-               <span><a href="{{pathFor 'venueEdit'}}">Edit Venue Info</a></span>
-              
+               {{#if currentUser}} <span><a href="{{pathFor 'venueEdit'}}">Edit Venue Info</a></span> {{/if}}
+
            </h3>
        </div>
      </div>
