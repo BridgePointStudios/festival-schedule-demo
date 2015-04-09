@@ -14,6 +14,8 @@ if (Meteor.isServer) {
   Meteor.publish("events", function () {
     return Events.find();
   });
- 
+ Meteor.publish("bandEvents", function(id) {
+    return Events.find({'eventBandName': id});
+ });
 
 }
