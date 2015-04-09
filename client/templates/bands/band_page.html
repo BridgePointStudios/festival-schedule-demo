@@ -1,14 +1,14 @@
 <template name="bandPage">
     <div class="band-page">
         {{> bandItem}}
-        <h3>List of Shows</h3>
-        {{#each bandEvents }}
+        <h3 class="band">List of Shows</h3>
+        {{#each Events }}
             <div class="band">
                 <div class="band-content">
                     <h2>{{eventTitle}}</h2>
-                    <h3>At {{eventVenueName}} </h3>
+                    <h3>Location: {{eventVenueName}} <span class="show-map"><a href="#">Show Map</a></span> </h3>
                 </div>
-            </div>    
+            </div>
         {{/each}}
     </div>
 </template>
