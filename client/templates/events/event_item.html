@@ -3,7 +3,7 @@
        <div class="band-content">
            <h1>{{ eventTitle }} <span style="float:right"><a href="/getPDF">PDF</a></span></h1>
            <h3><a href="/bands/{{ eventBandName }}">{{ eventBandName }}</a>at
-             <a href="{{pathFor 'venuePage'}}">{{ eventVenueName }}</a>
+             <a href="/venues/{{ eventVenueName }}">{{ eventVenueName }}</a>
              {{#if currentUser}} <span><a href="{{pathFor 'eventEdit'}}">Edit Event Info</a></span> {{/if}}
            </h3>
            <div class="show-times">
