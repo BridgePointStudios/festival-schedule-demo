@@ -1,4 +1,4 @@
-Template.bandsEdit.helpers({
+Template.bandEdit.helpers({
   beforeRemove: function () {
     return function (collection, id) {
       var doc = collection.findOne(id);
