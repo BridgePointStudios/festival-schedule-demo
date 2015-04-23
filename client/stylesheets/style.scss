@@ -95,11 +95,17 @@ header .navbar-toggle {
 header .navbar-default .navbar-toggle .icon-bar{
 	background-color: white;
 }
+.button {
+    margin: 0 10px;
+}
+.button a {
+    font-size: 14px;
 
-
+}
 
 #spinner {
-  height: 300px; }
+  height: 300px;
+  }
 
 .band-content h1, .band-content h2 {
     margin-top: 0;

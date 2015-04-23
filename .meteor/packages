@@ -12,7 +12,6 @@ msavin:mongol
 twbs:bootstrap
 fourseven:scss
 ongoworks:security
-tsega:bootstrap3-datetimepicker
 aldeed:simple-schema
 aldeed:delete-button
 accounts-twitter
@@ -40,3 +39,6 @@ aldeed:template-extension
 tracker
 alethes:pages
 aldeed:autoform
+aldeed:autoform-bs-datetimepicker
+mrt:moment-timezone
+tsega:bootstrap3-datetimepicker@=3.1.3_3
