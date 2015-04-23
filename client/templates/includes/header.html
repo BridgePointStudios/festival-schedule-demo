@@ -13,9 +13,12 @@
       <div class="collapse navbar-collapse" id="navigation">
         <ul class="nav navbar-nav">
 
-                <li><a href="{{pathFor 'bandsList'}}">Bands</a></li>
-                <li><a href="{{pathFor 'venuesList'}}">Venues</a></li>
-                <li><a href="{{pathFor 'eventsList'}}">Events</a></li>
+                <li><a class="hidden-xs" href="{{pathFor 'bandsList'}}">Bands</a></li>
+                <li><a class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse" href="{{pathFor 'bandsList'}}">Bands</a></li>
+                <li><a class="hidden-xs" href="{{pathFor 'venuesList'}}">Venues</a></li>
+                <li><a class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse" href="{{pathFor 'venuesList'}}">Venues</a></li>
+                <li><a class="hidden-xs" href="{{pathFor 'eventsList'}}">Events</a></li>
+                <li><a class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse" href="{{pathFor 'eventsList'}}">Events</a></li>
 
 
 

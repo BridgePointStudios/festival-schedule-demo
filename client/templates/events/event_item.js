@@ -105,3 +105,13 @@ Template.eventItem.events({
     doc.save(moment(evnt.eventStartTime).format('YYYY-MM-DD') + ' - ' + evnt.eventBandName + ' at ' + evnt.eventVenueName + '.pdf');
 }
 });
+
+Template.eventItem.events({
+    'click .send-contract': function () {
+        Meteor.call('sendContract',
+        'jeremy@bridgepointstudio.com',
+        'booking@muscleshoalsartists.com',
+        'Here is your contract',
+        'Please review the contract and return it.');
+}
+});

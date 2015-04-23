@@ -1,8 +1,12 @@
 <template name="eventItem">
     <div class="band">
        <div class="band-content">
-           <a href="/testthis">test</a>
-           <h1>{{ eventTitle }} <span style="float:right"><a href="#" class="genpdf">Create PDF</a></span></h1>
+
+           <h1>{{ eventTitle }}
+               <span style="float:right"><button><a href="#" class="genpdf">Create PDF Contract</a></button></span>
+               <span style="float:right"><button><a href="#" class="send-contract">Send Email Contract</a></button></span>
+
+               </h1>
            <h3><a href="/bands/{{ eventBandName }}">{{ eventBandName }}</a>at
              <a href="/venues/{{ eventVenueName }}">{{ eventVenueName }}</a>
              {{#if currentUser}} <span><a href="{{pathFor 'eventEdit'}}">Edit Event Info</a></span> {{/if}}
