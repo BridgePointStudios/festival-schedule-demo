@@ -1,6 +1,6 @@
 
 Template.eventsList.helpers({
     events: function() {
-        return Events.find();
+        return Events.find({}, {sort: { eventStartTime: 1 }});
     }
 });

@@ -75,6 +75,9 @@ body {
 	background-color: $orange;
 	border-bottom: 1px solid $blue;
 }
+.alignright {
+    float:right;
+}
 
 @media (min-width: 768px) {
     .navbar .navbar-nav {
@@ -85,6 +88,23 @@ body {
 
     .navbar .navbar-collapse {
         text-align: center;
+    }
+}
+@media (max-width: 1000px) {
+    .navbar-default .navbar-brand{
+        font-size: 24px;
+    }
+}
+@media (max-width: 450px) {
+    .navbar-default .navbar-brand {
+        font-size: 34px;
+        line-height: 1.2em;
+        top: -54px;
+        position: relative;
+}
+
+    #main {
+        padding-top: 160px;
     }
 }
 
@@ -102,7 +122,9 @@ header .navbar-default .navbar-toggle .icon-bar{
     font-size: 14px;
 
 }
-
+.show-times {
+    font-size: 2em;
+}
 #spinner {
   height: 300px;
   }

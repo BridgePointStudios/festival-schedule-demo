@@ -1,6 +1,7 @@
 Bands.permit(['insert','update','remove']).apply();
 Venues.permit(['insert','update','remove']).apply();
 Events.permit(['insert','update','remove']).apply();
+Agents.permit(['insert','update','remove']).apply();
 
 
 
@@ -14,5 +15,8 @@ if (Meteor.isServer) {
   Meteor.publish("events", function () {
     return Events.find();
   });
- 
+  Meteor.publish("agents", function () {
+    return Agents.find();
+  });
+
 }

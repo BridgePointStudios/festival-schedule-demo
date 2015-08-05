@@ -10,6 +10,12 @@ Template.addNewEvent.helpers({
         return Venues.find().map(function (c) {
             return {label: c.venueName, value: c.venueName};
         });
+    },
+    // adds booking agent values to select box for addNewEvent
+    eventBookingAgents: function () {
+        return Agents.find().map(function (c) {
+            return {label: c.agentName, value: c.agentName};
+        });
     }
 
 

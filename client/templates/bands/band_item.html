@@ -6,6 +6,10 @@
               {{#if currentUser}} <span><a href="{{pathFor 'bandEdit'}}">Edit Band Info</a></span>{{/if}}
 
            </h3>
+           {{#if onBandPage}}
+               <p> {{bandBio}} </p>
+           {{/if}}
+
        </div>
      </div>
 </template>
