@@ -108,10 +108,19 @@ Template.eventItem.events({
 
 Template.eventItem.events({
     'click .send-contract': function () {
-        Meteor.call('sendContract',
-        'jeremy@bridgepointstudio.com',
+        var evnt = Events.findOne(this._id);
+        var band = Bands.findOne({bandName: evnt.eventBandName});
+        var venue = Venues.findOne({venueName: evnt.eventVenueName});
+
+        Meteor.call('logSomething',band.bandContactEmail);
+
+
+       Meteor.call('sendContract',
+        band.bandContactEmail,
         'booking@muscleshoalsartists.com',
         'Here is your contract',
-        'Please review the contract and return it.');
+         "Band Name: " + band.bandName + "\n" + "Event Date: " + moment(evnt.eventStartTime).format('MMMM Do YYYY, h:mm a'));
+
+
 }
 });
