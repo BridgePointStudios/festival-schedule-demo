@@ -15,7 +15,7 @@ Template.bandPage.helpers({
 
     settings: function(){
     	return {
-    		rowsPerPage: 10,
+    		rowsPerPage: 12,
     		showFilter: true,
     		fields: [
     			{ key:'Month'},
@@ -23,7 +23,7 @@ Template.bandPage.helpers({
 				]
     	};
     }
-    
+
 });
 
 function getRandomInt(min, max) {
@@ -42,6 +42,7 @@ function GetAllRevenueForBand(mBandName)
 
 	var allBandEvents = Events.find({eventBandName: mBandName});
 	var associativeRev = {};
+    var amountDue = {};
 	//List of all events for this band
 	allBandEvents.forEach(function(currentEvent)
 	{
@@ -60,8 +61,8 @@ function GetAllRevenueForBand(mBandName)
 	var tableCollection = [];
 	for (var key in associativeRev)
 	{
-		tableCollection.push({Month: key,Subtotal: associativeRev[key]});
-	
+		tableCollection.push({Month: key,'Total Gig Income':  accounting.formatMoney(associativeRev[key]),'Amount Due to MSAU': accounting.formatMoney(associativeRev[key]/10)});
+
 	}
 
 

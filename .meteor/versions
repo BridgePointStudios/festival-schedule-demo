@@ -32,7 +32,7 @@ ejson@1.0.6
 email@1.0.6
 facebook@1.2.1
 fastclick@1.0.3
-fortawesome:fontawesome@4.3.0
+fortawesome:fontawesome@4.4.0
 fourseven:scss@2.1.1
 geojson-utils@1.0.3
 gwendall:session-json@0.1.7
@@ -40,7 +40,7 @@ handlebars@1.0.3
 html-tools@1.0.4
 htmljs@1.0.4
 http@1.1.0
-ian:accounts-ui-bootstrap-3@1.2.76
+ian:accounts-ui-bootstrap-3@1.2.77
 id-map@1.0.3
 iron:controller@1.0.8
 iron:core@1.0.8
@@ -54,13 +54,14 @@ jquery@1.11.3_2
 json@1.0.3
 lai:collection-extensions@0.1.4
 launch-screen@1.0.2
+lepozepo:accounting@1.0.0
 livedata@1.0.13
 localstorage@1.0.3
 logging@1.0.7
-matb33:collection-hooks@0.7.13
+matb33:collection-hooks@0.7.14
 meteor@1.1.6
 meteor-platform@1.2.2
-meteortoys:toykit@0.8.2
+meteortoys:toykit@0.8.7
 minifiers@1.1.5
 minimongo@1.0.8
 mobile-status-bar@1.0.3
@@ -69,7 +70,7 @@ mongo@1.1.0
 mongo-livedata@1.0.8
 mrt:moment@2.8.1
 mrt:moment-timezone@0.2.1
-msavin:mongol@1.1.0
+msavin:mongol@1.1.5
 npm-bcrypt@0.7.8_2
 oauth@1.1.4
 oauth1@1.1.4
@@ -93,7 +94,7 @@ spacebars-compiler@1.0.6
 srp@1.0.3
 stylus@1.0.7
 templating@1.1.1
-todda00:friendly-slugs@0.3.3
+todda00:friendly-slugs@0.3.4
 tracker@1.0.7
 tsega:bootstrap3-datetimepicker@3.1.3_3
 twbs:bootstrap@3.3.5

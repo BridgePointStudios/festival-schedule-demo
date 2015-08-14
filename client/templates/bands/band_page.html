@@ -2,18 +2,10 @@
     <div class="band-page">
         {{> bandItem}}
 
-        <div class="band">
-            <a href="http://www.muscleshoalsartists.com/wp-content/uploads/2015/03/Justin-Kalk.jpg"><img class="alignright wp-image-689 size-medium" src="http://www.muscleshoalsartists.com/wp-content/uploads/2015/03/Justin-Kalk-300x300.jpg" alt="" width="300" height="300" /></a>
-            <p>The core group of the Justin Kalk Orchestra is comprised of guitar/composer and vocalist Justin Kalk, bassist Steo Britton and drummer/percussionist Jeremy Williams. When the group storms on stage with a sizzling version of “Stole My VCR”, one of the band’s signature tunes. Jaws drop; heads turn and guitar cases are placed down. The crowd stays intact and engaged deep into the set, mesmerized by Kalk and his bands’ obvious musical power-trio talents and tightness as they sail through Kalk’s vast repertoire of original material.</p>
-            <p>Nashvillian Justin Kalk brings a highly original yet rooted approach that pays tribute to many familiar genres from Hendrix-flavored rock to Buddy Guy-inspired blues to fiery guitar solos from Stevie Ray, and orchestral compositions that would make even the legendary Frank Zappa proud. Says Kalk “Growing up, the music most relevant to me had an emotional richness like the classic Led Zeppelin records that were driven by storytelling and guitar solos at the same time. We strive for that same level of excellence in our music and hope that fans around the globe will love it too.”</p>
-            <div style="float: left; padding: 0px 10px 10px 0px;"><iframe src="https://www.youtube.com/embed/Cb_ATXtMdVE" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
-            <h2>Links</h2>
-            <a href="http://www.justinkalk.com">www.justinkalk.com</a>
-            <h2>Genre</h2>
-            Rock/Alternative
-            <h2>Current Location</h2>
-            Nashville, TN
-        </div>
+        <div class="band-revenue">
+           <h3 class="band">Band Revenue</h3>
+           {{> reactiveTable collection=bandRevenueCollection settings=bandRevenueSettings}}
+           </div>
 
         <h3 class="band">List of Shows</h3>
         {{#each Events }}
@@ -33,9 +25,6 @@
            </div>
          </div>
         {{/each}}
-        <div class="band-revenue">
-           <h3 class="band">Band Revenue</h3>
-           {{> reactiveTable collection=bandRevenueCollection settings=bandRevenueSettings}}
-           </div>
+
     </div>
 </template>
