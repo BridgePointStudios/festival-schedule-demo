@@ -12,7 +12,7 @@ Template.bandPage.helpers({
     {
     	return GetAllRevenueForBand(this.bandName);
     },
-
+//**RUSS this settings is not connected to the function call that runs the rest of this pagecode? it calls a named settings and this isn't names?
     settings: function(){
     	return {
     		rowsPerPage: 12,
@@ -26,27 +26,15 @@ Template.bandPage.helpers({
 
 });
 
-function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-function GetRevenueForMonth(mBandName,mMonth)
-{
-	return getRandomInt(500,1500);
-}
-
 function GetAllRevenueForBand(mBandName)
 {
-
 	//Months are in the format YYYY-MM e.g. 2012-08
-
 	var allBandEvents = Events.find({eventBandName: mBandName});
 	var associativeRev = {};
     var amountDue = {};
 	//List of all events for this band
 	allBandEvents.forEach(function(currentEvent)
 	{
-
 		//date is a native Javascript Date object.
 		var date = currentEvent.eventStartTime;
 		var dateString = moment(date).format('YYYY-MM');
@@ -65,7 +53,14 @@ function GetAllRevenueForBand(mBandName)
 
 	}
 
-
-
 	return tableCollection;
+}
+//**RUSS was the rest of this just something you used for testing?
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function GetRevenueForMonth(mBandName,mMonth)
+{
+	return getRandomInt(500,1500);
 }

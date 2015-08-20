@@ -13,7 +13,7 @@ Template.eventsList.rendered = function()
 	myCursor.forEach(function(currentEvent) {
 		var bandName = currentEvent.eventBandName;
 		var venueName = currentEvent.eventVenueName;
-		var eventTitle = bandName + " @ " + venueName;
+		var eventTitle = bandName + " @ " + "\n" + venueName;
 
 		var tempEvent = {
 			title: eventTitle,
@@ -23,6 +23,6 @@ Template.eventsList.rendered = function()
 		$('#myCalendar').fullCalendar('renderEvent',tempEvent,true);
 	});
 
-	
-	
+
+
 }

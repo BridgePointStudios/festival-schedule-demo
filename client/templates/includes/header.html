@@ -12,24 +12,22 @@
       </div>
       <div class="collapse navbar-collapse" id="navigation">
         <ul class="nav navbar-nav">
-
+            {{#if currentUser}}
                 <li><a class="hidden-xs" href="{{pathFor 'bandsList'}}">Bands</a></li>
                 <li><a class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse" href="{{pathFor 'bandsList'}}">Bands</a></li>
-                {{#if currentUser}}
-                    <li><a class="hidden-xs" href="{{pathFor 'venuesList'}}">Venues</a></li>
-                    <li><a class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse" href="{{pathFor 'venuesList'}}">Venues</a></li>
-                    
-                    <li><a class="hidden-xs" href="{{pathFor 'agentsList'}}">Booking Agents</a></li>
-                    <li><a class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse" href="{{pathFor 'agentsList'}}">Agents</a></li>
 
-                {{/if}}
-                    <li><a class="hidden-xs" href="{{pathFor 'eventsList'}}">Events</a></li>
-                    <li><a class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse" href="{{pathFor 'eventsList'}}">Events</a></li>
+                <li><a class="hidden-xs" href="{{pathFor 'venuesList'}}">Venues</a></li>
+                <li><a class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse" href="{{pathFor 'venuesList'}}">Venues</a></li>
 
+                <li><a class="hidden-xs" href="{{pathFor 'agentsList'}}">Booking Agents</a></li>
+                <li><a class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse" href="{{pathFor 'agentsList'}}">Agents</a></li>
 
+                <li><a class="hidden-xs" href="{{pathFor 'eventsList'}}">Events</a></li>
+                <li><a class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse" href="{{pathFor 'eventsList'}}">Events</a></li>
 
-
-
+                <li><a class="hidden-xs" href="{{pathFor 'billingDashboard'}}">Billing</a></li>
+                <li><a class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse" href="{{pathFor 'billingDashboard'}}">Billing</a></li>
+            {{/if}}
         </ul>
         <ul style="float:right;" class="nav navbar-nav navbar-right">
           {{> loginButtons}}
