@@ -1,8 +1,9 @@
 
 Template.bandPage.helpers({
     Events: function() {
-        console.log(this);
+
         return Events.find({eventBandName: this.bandName});
+    
     },
     onBandPage: function() {
         return true;
@@ -12,6 +13,7 @@ Template.bandPage.helpers({
     {
     	return GetAllRevenueForBand(this.bandName);
     },
+
 //**RUSS this settings is not connected to the function call that runs the rest of this pagecode? it calls a named settings and this isn't names?
     settings: function(){
     	return {
@@ -25,6 +27,35 @@ Template.bandPage.helpers({
     }
 
 });
+
+
+Template.bandPage.rendered = function()
+{
+	//Fires once the page is rendered.
+
+    //**RUSS - the myCursor needs to be edited to make it only contain events for this.bandName
+    // similar to the .helper at the top, or the billing function, it's working to populate the
+    // calendar but with all data. note that 'this.bandName' is undefinded here even though it works above
+	myCursor = Events.find();
+
+	var myEvents = [];
+	myCursor.forEach(function(currentEvent) {
+		var bandName = currentEvent.eventBandName;
+		var venueName = currentEvent.eventVenueName;
+		var eventTitle = bandName + " @ " + "\n" + venueName;
+
+		var tempEvent = {
+			title: eventTitle,
+			start: moment(currentEvent.eventStartTime),
+			allDay: true
+		};
+
+		$('#myCalendar').fullCalendar('renderEvent',tempEvent,true);
+	});
+
+
+
+}
 
 function GetAllRevenueForBand(mBandName)
 {

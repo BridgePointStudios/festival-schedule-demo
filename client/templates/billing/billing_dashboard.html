@@ -1,6 +1,11 @@
 <template name="billingDashboard">
     <h3 class="band">Billing</h3>
     <div class="band-revenue">
+        <h3 class="band">August 2015</h3>
+        {{> reactiveTable collection=msauRevenueCollection settings=bandRevenueSettings}}
+        <h3 class="band">July 2015</h3>
+        {{> reactiveTable collection=msauRevenueCollection settings=bandRevenueSettings}}
+        <h3 class="band">June 2015</h3>
         {{> reactiveTable collection=msauRevenueCollection settings=bandRevenueSettings}}
     </div>
 

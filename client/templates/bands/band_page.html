@@ -3,8 +3,13 @@
         {{> bandItem}}
 
         <div class="band-revenue">
-           <h3 class="band">Band Revenue</h3>
+           <h3 class="band"><a href="{{pathFor 'bandPage'}}">{{ bandName }}</a> Revenue</h3>
            {{> reactiveTable collection=bandRevenueCollection settings=bandRevenueSettings}}
+           </div>
+
+           <div class="calendar">
+                <h3 class="band">Events for <a href="{{pathFor 'bandPage'}}">{{ bandName }}</a></h3>
+               {{> fullcalendar id="myCalendar"}}
            </div>
 
         <h3 class="band">List of Shows</h3>
