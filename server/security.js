@@ -5,6 +5,7 @@ Agents.permit(['insert','update','remove']).apply();
 
 
 
+
 if (Meteor.isServer) {
   Meteor.publish("bands", function () {
     return Bands.find();
@@ -18,5 +19,7 @@ if (Meteor.isServer) {
   Meteor.publish("agents", function () {
     return Agents.find();
   });
-
+  Meteor.publish("allUsers", function () {
+    return Meteor.users.find({}, {fields:{username:1,emails:1}});
+  });
 }
