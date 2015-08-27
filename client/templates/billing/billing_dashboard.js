@@ -2,6 +2,34 @@ Template.billingDashboard.helpers({
     msauRevenueCollection: function()
     {
     	return GetAllRevenueForMSAU(this.bandName);
+    },
+    months: function()
+    {
+    	//return a list of months
+
+    	var allMonths = [];
+    	var allEvents = Events.find();
+
+    	allEvents.forEach(function(currentEvent)
+    	{
+    		var dateString = moment(currentEvent.eventStartTime).format('YYYY-MM');
+
+    		//First, add all months to the allMonths array and initialize empty objects for each month
+    		//Only add month if its not in the list
+    		if (allMonths.indexOf(dateString) <= -1)
+    		{
+    			allMonths.push(dateString);
+    		}
+
+    	});
+
+		return allMonths;   	
+
+    },
+    billingForMonth: function()
+    {
+
+    	alert("test");
     }
 
 });
