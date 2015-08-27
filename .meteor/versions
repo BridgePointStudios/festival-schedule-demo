@@ -3,7 +3,7 @@ accounts-facebook@1.0.4
 accounts-oauth@1.1.5
 accounts-password@1.1.1
 accounts-twitter@1.0.4
-aldeed:autoform@4.2.2
+aldeed:autoform@5.4.1
 aldeed:autoform-bs-datetimepicker@1.0.6
 aldeed:autoform-select2@2.0.2
 aldeed:collection2@2.3.3
@@ -33,7 +33,7 @@ email@1.0.6
 facebook@1.2.1
 fastclick@1.0.3
 fortawesome:fontawesome@4.4.0
-fourseven:scss@2.1.1
+fourseven:scss@3.2.0
 geojson-utils@1.0.3
 gwendall:session-json@0.1.7
 handlebars@1.0.3

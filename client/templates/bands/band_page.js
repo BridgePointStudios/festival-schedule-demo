@@ -1,6 +1,8 @@
 
 Template.bandPage.helpers({
     Events: function() {
+    	//Make a global variable to hold band events
+    	thisBandEvents = GetBandEvents(this.bandName);
 
         return Events.find({eventBandName: this.bandName});
     
@@ -28,18 +30,14 @@ Template.bandPage.helpers({
 
 });
 
-
-Template.bandPage.rendered = function()
+function GetBandEvents(mBandName)
 {
-	//Fires once the page is rendered.
+	myCursor = Events.find({eventBandName: mBandName});
 
-    //**RUSS - the myCursor needs to be edited to make it only contain events for this.bandName
-    // similar to the .helper at the top, or the billing function, it's working to populate the
-    // calendar but with all data. note that 'this.bandName' is undefinded here even though it works above
-	myCursor = Events.find();
+	var bandEvents = [];
 
-	var myEvents = [];
-	myCursor.forEach(function(currentEvent) {
+	myCursor.forEach(function(currentEvent) 
+	{
 		var bandName = currentEvent.eventBandName;
 		var venueName = currentEvent.eventVenueName;
 		var eventTitle = bandName + " @ " + "\n" + venueName;
@@ -49,12 +47,26 @@ Template.bandPage.rendered = function()
 			start: moment(currentEvent.eventStartTime),
 			allDay: true
 		};
-
-		$('#myCalendar').fullCalendar('renderEvent',tempEvent,true);
+		bandEvents.push(tempEvent);
 	});
+	return bandEvents;
+
+}
 
 
+Template.bandPage.rendered = function()
+{
+	//Fires once the page is rendered.
 
+    	thisBandEvents.forEach(function(tempEvent)
+    	{
+    		AddEventToCalendar(tempEvent);
+    	});
+};
+
+function AddEventToCalendar(eventObject)
+{
+	$('#myCalendar').fullCalendar('renderEvent',eventObject,true);
 }
 
 function GetAllRevenueForBand(mBandName)
@@ -85,13 +97,4 @@ function GetAllRevenueForBand(mBandName)
 	}
 
 	return tableCollection;
-}
-//**RUSS was the rest of this just something you used for testing?
-function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-function GetRevenueForMonth(mBandName,mMonth)
-{
-	return getRandomInt(500,1500);
 }
