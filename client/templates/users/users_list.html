@@ -2,7 +2,7 @@
     <h3 class="band">Users</h3>
   <div class="bands">
       {{#each user}}
-    <h3 class="band">{{username}} {{profile.name}} </h3>
+    {{> userItem}}
    {{/each}}
   </div>
 </template>

@@ -2,6 +2,12 @@
 Template.eventsList.helpers({
     events: function() {
         return Events.find({}, {sort: { eventStartTime: 1 }});
+    },
+    options: function()
+    {
+        return {
+                defaultView: 'basicWeek'
+        };
     }
 });
 
@@ -20,7 +26,7 @@ Template.eventsList.rendered = function()
 			start: moment(currentEvent.eventStartTime),
 			allDay: true
 		}
-		$('#myCalendar').fullCalendar('renderEvent',tempEvent,true);
+		$('#fullCalendar').fullCalendar('renderEvent',tempEvent,true);
 	});
 
 
