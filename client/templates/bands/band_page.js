@@ -32,11 +32,7 @@ function GetBandEvents(mBandName)
 
 	var bandEvents = [];
 
-<<<<<<< HEAD
 	myCursor.forEach(function(currentEvent)
-=======
-	myCursor.forEach(function(currentEvent) 
->>>>>>> origin/master
 	{
 		var bandName = currentEvent.eventBandName;
 		var venueName = currentEvent.eventVenueName;
@@ -50,26 +46,10 @@ function GetBandEvents(mBandName)
 		bandEvents.push(tempEvent);
 	});
 	return bandEvents;
-<<<<<<< HEAD
-
-}
-=======
 
 }
 
 
-Template.bandPage.rendered = function()
-{
-	//Fires once the page is rendered.
->>>>>>> origin/master
-
-    	thisBandEvents.forEach(function(tempEvent)
-    	{
-    		AddEventToCalendar(tempEvent);
-    	});
-};
-
-<<<<<<< HEAD
 Template.bandPage.rendered = function()
 {
 	//Fires once the page is rendered.
@@ -83,11 +63,6 @@ Template.bandPage.rendered = function()
 function AddEventToCalendar(eventObject)
 {
 	$('#bandCalendar').fullCalendar('renderEvent',eventObject,true);
-=======
-function AddEventToCalendar(eventObject)
-{
-	$('#myCalendar').fullCalendar('renderEvent',eventObject,true);
->>>>>>> origin/master
 }
 
 function GetAllRevenueForBand(mBandName)
