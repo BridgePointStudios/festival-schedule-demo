@@ -15,5 +15,9 @@ Meteor.methods({
 
     logSomething: function(text) {
         console.log(text);
-    }
+    },
+    downloadBands: function() {
+  var collection = Bands.find().fetch();
+  return exportcsv.exportToCSV(collection, heading, delimiter);
+}
 });

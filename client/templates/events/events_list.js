@@ -1,7 +1,13 @@
 
 Template.eventsList.helpers({
     events: function() {
-        return Events.find({}, {sort: { eventStartTime: 1 }});
+        var currDate = new Date();
+        currDate.setDate(currDate.getDate()-1);
+        console.log(currDate);
+        return Events.find(
+            {eventStartTime: {$gt: currDate}},
+            {sort: { eventStartTime: 1 }}
+        );
     },
     options: function()
     {

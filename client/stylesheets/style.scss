@@ -43,11 +43,12 @@ body {
 
 .navbar {
 	border: none;
-	color: $blue;
+	color: #ffffff;
 }
 
 .navbar-default {
-	background-color: $orange;
+	background-image: url('http://muscleshoalsartists.com/wp-content/themes/parallaxpro/images/bg.jpg');
+    background-repeat: repeat;
 }
 
 .navbar-default .navbar-brand{
@@ -56,18 +57,29 @@ body {
 	font-style: normal;
 	font-variant: small-caps;
 	font-weight: bold;
-	color: $blue;
+	color: #ffffff;
+    text-indent: -10000px;
+    background-image: url("http://muscleshoalsartists.com/wp-content/uploads/2014/08/msau-logo.png");
+    background-repeat: no-repeat;
+    width: 227px;
+    height: 83px;
 }
 
 .navbar-default .navbar-nav>li>a {
-	color: $blue;
+	color: #ffffff;
 	font-weight: 400;
     padding: 10px 10px;
 }
 
+
 .navbar-default .navbar-nav > li.active > a{
 	border-bottom: 2px solid $blue;
 	background-color: $orange;
+    color: #ffffff;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+    color: #fff;
 }
 
 .navbar-default .navbar-nav>.active>a,
@@ -75,6 +87,7 @@ body {
 .navbar-default .navbar-nav>.active>a:hover {
 	background-color: $orange;
 	border-bottom: 1px solid $blue;
+    color: #ffffff;
 }
 .alignright {
     float:right;

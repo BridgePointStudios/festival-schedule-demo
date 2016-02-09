@@ -81,26 +81,33 @@ Template.eventItem.events({
     doc.text(26, 158, 'Food & Beverage Tab: ' + evnt.eventTabProvided);
     doc.text(26, 164, 'Merchandise: ' + evnt.eventMerch);
     doc.text(26, 170, 'Lodging: ' + evnt.eventLodging);
-    doc.text(20, 176, ' ');
+    if (evnt.showNotes != undefined) {
+        var allNotes = evnt.showNotes;
+        var notes1stLine = allNotes.substring(0, 60);
+        var notes2ndLine = allNotes.substring(61, 120);
+        doc.text(26, 176, 'Notes: ' + notes1stLine);
+    doc.text(40, 182, notes2ndLine);
+};
+
     doc.setFontSize(10);
-    doc.text(20, 182, 'This contract constitutes a complete and binding agreement between the employer and the musician(s).');
-    doc.text(20, 188, 'AGENT acts only as agent and assumes no responsibility as between the employer and the musician(s).');
-    doc.text(20, 194, 'In case of breach of this contract by Employer,');
-    doc.text(26, 200, 'the Employer agrees to pay the amount stated in Section 6 as mitigated damages,');
-    doc.text(26, 206, 'plus reasonable attorney\'s fees, court costs, and legal interest.');
-    doc.text(20, 212, ' ');
-    doc.text(20, 218, 'The persons signing for Employer and Musician(s) agree to be personally, jointly and severally liable');
-    doc.text(26, 224, 'for the terms of this contract.');
-    doc.text(20, 230, ' ');
-    doc.text(20, 236, 'For MSAU:');
-    doc.text(20, 242, ' ');
-    doc.text(20, 248, '________________');
-    doc.text(80, 236, 'For Purchaser:');
-    doc.text(80, 242, ' ');
-    doc.text(80, 248, '________________');
-    doc.text(140, 236, 'For Artist:');
-    doc.text(140, 242, ' ');
-    doc.text(140, 248, '________________');
+    doc.text(20, 188, 'This contract constitutes a complete and binding agreement between the employer and the musician(s).');
+    doc.text(20, 194, 'AGENT acts only as agent and assumes no responsibility as between the employer and the musician(s).');
+    doc.text(20, 200, 'In case of breach of this contract by Employer,');
+    doc.text(26, 206, 'the Employer agrees to pay the amount stated in Section 6 as mitigated damages,');
+    doc.text(26, 212, 'plus reasonable attorney\'s fees, court costs, and legal interest.');
+    doc.text(20, 218, ' ');
+    doc.text(20, 224, 'The persons signing for Employer and Musician(s) agree to be personally, jointly and severally liable');
+    doc.text(26, 230, 'for the terms of this contract.');
+    doc.text(20, 236, ' ');
+    doc.text(20, 242, 'For MSAU:');
+    doc.text(20, 248, ' ');
+    doc.text(20, 254, '________________');
+    doc.text(80, 242, 'For Purchaser:');
+    doc.text(80, 248, ' ');
+    doc.text(80, 254, '________________');
+    doc.text(140, 242, 'For Artist:');
+    doc.text(140, 248, ' ');
+    doc.text(140, 254, '________________');
 
     doc.save(moment(evnt.eventStartTime).format('YYYY-MM-DD') + ' - ' + evnt.eventBandName + ' at ' + evnt.eventVenueName + '.pdf');
 }
